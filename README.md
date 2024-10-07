@@ -22,16 +22,27 @@ In this project, the Singleton pattern ensures that only one instance of the Gam
 
 ---
 
-## Benefits of Using the Singleton Pattern
+# Benefits of Using the Singleton Pattern
 
 **Unified Control Point**: The Singleton pattern guarantees a solitary GameEngine instance, eliminating the risk of inadvertently spawning multiple copies.
+
+
 **Resource Conservation**: By postponing instance creation until it's explicitly required, the Singleton pattern helps preserve system resources and memory allocation.
+
+
 **Universal Access**: The game engine can be reached from any part of the codebase, facilitating straightforward usage of the same instance without the need to transfer references between components.
-**State Uniformity**: Employing a single instance across the entire game ensures coherent management of game states, reducing the likelihood of errors arising from conflicting instances
+
+
+**State Uniformity**: Employing a single instance across the entire game ensures coherent management of game states, reducing the likelihood of errors arising from conflicting instances.
+
 ---
 
 # Consequences
 
 **Widespread Dependence**: Overreliance on a Singleton can result in a closely intertwined system, where numerous code segments are tied to the same instance, complicating future modifications or restructuring efforts.
+
+
 **Hurdles in Testing**: The presence of a lone instance can impede the process of writing unit tests, particularly when tests are executed concurrently, as shared states may lead to conflicts.
+
+
 **Multithreading Complexities**: In environments with multiple threads, ensuring the creation of only one instance may necessitate additional synchronization techniques, introducing extra layers of code complexity.
